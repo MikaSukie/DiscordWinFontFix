@@ -1,0 +1,60 @@
+/**
+ * @name EmojiFontFix
+ * @author MikaSukie
+ * @version 1.0.0
+ * @description Proper emoji support for windows.
+ * @invite zmnuz4h88x
+*/
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+/* === Add AppleColorEmoji font (local file) === */
+@font-face {
+  font-family: "AppleColorEmojiCustom";
+  src: url("./AppleColorEmoji_WindowsCompatible.ttf") format("truetype");
+  font-display: swap;
+}
+
+.emoji,
+.emojiInner,
+.emojiLarge,
+.emoji-small,
+.emojiContainer {
+  font-family: "AppleColorEmojiCustom", "Segoe UI Emoji", "Twemoji", sans-serif !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+body, span, div, p, ::before, ::after {
+  font-family: var(--font), "AppleColorEmojiCustom", "Segoe UI Emoji", sans-serif !important;
+}
+
+:root {
+  --background-blur: 0px;
+  --accent: hsl(164 100% 45%);
+  --accent-text: hsl(0 0 0%);
+  --glow-intensity: 1;
+  --members-width: 280px;
+  --guilds-width: 95px;
+  --server-icon-size: 46;
+  --chat-avatar-size: 40px;
+  --opacity: 0.85;
+  --font: "Inter";
+
+  --rs-small-spacing: 2px;
+  --rs-medium-spacing: 4px;
+  --rs-large-spacing: 4px;
+  --rs-small-width: 1.5px;
+  --rs-medium-width: 2px;
+  --rs-large-width: 2px;
+
+  --rs-online-color: #43b581;
+  --rs-idle-color: #faa61a;
+  --rs-dnd-color: #f04747;
+  --rs-offline-color: #636b75;
+  --rs-streaming-color: #643da7;
+  --rs-invisible-color: #747f8d;
+  --rs-phone-color: var(--rs-online-color);
+  --rs-phone-visible: block;
+}
